@@ -81,6 +81,11 @@ async function upsertEntry(item) {
       handle: item.handle,
     },
     metaobject: {
+      capabilities: {
+        publishable: {
+          status: 'ACTIVE'
+        }
+      },
       fields: buildFields(item.fields),
     },
   })
