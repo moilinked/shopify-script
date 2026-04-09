@@ -14,7 +14,7 @@ if (!SHOP_DOMAIN || !ACCESS_TOKEN) {
   process.exit(1)
 }
 const METAOBJECT_TYPE = 'specs_obj'
-const INPUT_FILE = path.join(_dirname, 'specs_obj_daata.json')
+const INPUT_FILE = path.join(__dirname, 'specs_obj_data.json')
 const REQUEST_DELAY_MS = 300 // 请求间隔，防止限流
 
 const URL = `https://${SHOP_DOMAIN}/admin/api/${API_VERSION}/graphql.json`
