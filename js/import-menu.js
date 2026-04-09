@@ -26,6 +26,7 @@ function buildItems(items) {
   return items.map((item) => ({
     title: item.title,
     url: item.url,
+    type: item.type,
     ...(item.items && item.items.length > 0 ? { items: buildItems(item.items) } : {}),
   }))
 }
