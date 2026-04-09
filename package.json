@@ -1,0 +1,20 @@
+{
+  "name": "shopify-metafield-scripts",
+  "private": true,
+  "description": "Shopify Admin API scripts for metafield definitions",
+  "scripts": {
+    "metafield:variants": "node js/metafield_variants.js",
+    "metafield:product": "node js/metafield_product.js",
+    "import:menu": "node js/import-menu.js",
+    "export:specs": "node js/export_specs_obj.js",
+    "import:specs": "node js/import_sepecs_obj.js",
+    "update:metaobject-definition": "node js/update_metaobject_definition.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "node-fetch": "^2.7.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
