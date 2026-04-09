@@ -7,7 +7,7 @@
     "metafield:product": "node js/metafield_product.js",
     "import:menu": "node js/import-menu.js",
     "export:specs": "node js/export_specs_obj.js",
-    "import:specs": "node js/import_sepecs_obj.js",
+    "import:specs": "node js/import_specs_obj.js",
     "update:metaobject-definition": "node js/update_metaobject_definition.js"
   },
   "dependencies": {
