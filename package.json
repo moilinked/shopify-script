@@ -6,6 +6,7 @@
     "metafield:variants": "node js/metafield_variants.js",
     "metafield:product": "node js/metafield_product.js",
     "import:menu": "node js/import-menu.js",
+    "convert:header": "node js/convert_header_html_to_json.js",
     "export:specs": "node js/export_specs_obj.js",
     "import:specs": "node js/import_specs_obj.js",
     "update:metaobject-definition": "node js/update_metaobject_definition.js"

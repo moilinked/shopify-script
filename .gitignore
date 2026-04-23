@@ -1,3 +1,6 @@
 node_modules/
 .env
 *.log
+*.generated.json
+header.html
+header.json
