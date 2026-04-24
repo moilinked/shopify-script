@@ -72,32 +72,6 @@ const METAFIELD_DEFINITIONS = [
   {"name": "youtube 视频列表", "namespace": "custom", "key": "product_main_youtube", "type": "list.single_line_text_field", "access": {"admin": "PUBLIC_READ_WRITE", "storefront": "PUBLIC_READ"}},
   {"name": "简短描述", "namespace": "custom", "key": "short_describe", "type": "multi_line_text_field", "access": {"admin": "PUBLIC_READ_WRITE", "storefront": "PUBLIC_READ"}},
   {"name": "悬停图片", "namespace": "custom", "key": "hover_image", "type": "file_reference", "validations": [{"name": "file_type_options", "value": "[\"Image\"]"}], "access": {"admin": "PUBLIC_READ_WRITE", "storefront": "PUBLIC_READ"}},
-  {
-    "name": "赠品",
-    "namespace": "custom",
-    "key": "gift_product",
-    "type": "product_reference",
-    "description": "",
-    "validations": [],
-    "access": {
-      "admin": "PUBLIC_READ_WRITE",
-      "storefront": "PUBLIC_READ"
-    }
-  },
-  {
-    "name": "赠品时间区间",
-    "namespace": "custom",
-    "key": "gift_date_range",
-    "type": "list.date_time",
-    "description": "第一个值为开始时间，第二个值为结束时间",
-    "validations": [
-      { "name": "list.max", "value": "2" }
-    ],
-    "access": {
-      "admin": "PUBLIC_READ_WRITE",
-      "storefront": "PUBLIC_READ"
-    }
-  },
   // {"name": "会员价", "namespace": "custom", "key": "member_price", "type": "single_line_text_field", "access": {"admin": "PUBLIC_READ_WRITE", "storefront": "PUBLIC_READ"}},
   // {"name": "会员折扣码", "namespace": "custom", "key": "member_code", "type": "single_line_text_field", "access": {"admin": "PUBLIC_READ_WRITE", "storefront": "PUBLIC_READ"}},
   // {"name": "product description for ai", "namespace": "custom", "key": "product_description_for_ai", "type": "multi_line_text_field", "access": {"admin": "PUBLIC_READ_WRITE", "storefront": "PUBLIC_READ"}},
