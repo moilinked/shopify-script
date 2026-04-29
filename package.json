@@ -9,7 +9,8 @@
     "convert:header": "node js/convert_header_html_to_json.js",
     "export:specs": "node js/export_specs_obj.js",
     "import:specs": "node js/import_specs_obj.js",
-    "update:metaobject-definition": "node js/update_metaobject_definition.js"
+    "update:metaobject-definition": "node js/update_metaobject_definition.js",
+    "sync:product-metafields": "node js/sync_product_metafields.js"
   },
   "dependencies": {
     "dotenv": "^16.4.5",

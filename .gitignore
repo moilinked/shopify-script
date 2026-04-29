@@ -4,3 +4,4 @@ node_modules/
 *.generated.json
 header.html
 header.json
+*.txt

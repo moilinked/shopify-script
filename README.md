@@ -24,9 +24,11 @@ copy .env.example .env
 |------|------|
 | `SHOPIFY_SHOP_DOMAIN` | 店铺域名，如 `your-store.myshopify.com` |
 | `SHOPIFY_ACCESS_TOKEN` | Admin API access token（按各脚本所需 scope 申请） |
+| `SHOPIFY_SHOP_DOMAIN_U` | 目标更新店铺域名；`sync:product-metafields` 使用，与 `SHOPIFY_SHOP_DOMAIN` 要求一致 |
+| `SHOPIFY_ACCESS_TOKEN_U` | 目标更新店铺 Admin API access token；`sync:product-metafields` 使用，与 `SHOPIFY_ACCESS_TOKEN` 要求一致 |
 | `SHOPIFY_API_VERSION` | 可选，默认 `2025-01` |
 
-多数位于 `js/` 下的脚本会从**项目根目录**的 `.env` 读取上述变量（通过 `path.join(__dirname, '..', '.env')`）。个别脚本若仍在文件顶部写死店铺与 Token，使用前请自行改为 `.env` 或安全占位。
+多数位于 `js/` 下的脚本会从**项目根目录**的 `.env` 读取上述变量（通过 `path.join(__dirname, '..', '.env')`）。`sync:product-metafields` 会用 `SHOPIFY_SHOP_DOMAIN` / `SHOPIFY_ACCESS_TOKEN` 查询源产品，并用 `SHOPIFY_SHOP_DOMAIN_U` / `SHOPIFY_ACCESS_TOKEN_U` 更新目标产品。个别脚本若仍在文件顶部写死店铺与 Token，使用前请自行改为 `.env` 或安全占位。
 
 官方 API 文档：[Shopify Admin GraphQL API](https://shopify.dev/docs/api/admin-graphql)。
 
@@ -42,6 +44,7 @@ copy .env.example .env
 | `npm run export:specs` | 将指定类型的 **元对象**导出到 `specs_obj_data.json`（需先在脚本内配置类型与凭证） |
 | `npm run import:specs` | 根据 `specs_obj_data.json` 对元对象执行 `metaobjectUpsert` |
 | `npm run update:metaobject-definition` | 按 `type` 查询元对象定义并更新 `displayNameKey` 与字段定义（见脚本内常量） |
+| `npm run sync:product-metafields` | 从源产品查询指定产品元字段，并同步更新到目标产品；需配置普通变量与 `_U` 变量 |
 
 等价命令示例：`node js/metafield_variants.js`。
 
