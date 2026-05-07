@@ -5,3 +5,5 @@ node_modules/
 header.html
 header.json
 *.txt
+product_metafields_export.json
+product_metafields_import_result.json
